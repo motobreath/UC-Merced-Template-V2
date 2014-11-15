@@ -12,8 +12,11 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
+            /*
             'Zend\Db\Adapter\Adapter'
                     => 'Zend\Db\Adapter\AdapterServiceFactory',
+             * 
+             */
         ),
     ),
     'bjyauthorize' => array(
@@ -95,4 +98,32 @@ return array(
         // strategy service name for the strategy listener to be used when permission-related errors are detected
         'unauthorized_strategy' => 'Permissions\View\RedirectionStrategy',
     ),
+    //Some optional component structure. This belongs in either a module with a config file or otherwise not commited in git
+    /*
+    'db' => array(
+            'driver'   => 'Pdo',
+            'dsn'      => 'mysql:dbname=####;host=####',
+            'username' => '####',
+            'password' => '####',
+            'host' => 'localhost'
+        ),
+        'ldap'=>array(
+            'host'              => '####',
+            'username'          => '####',
+            'password'          => '####',
+            'baseDn'            => '####',
+        ),
+        "email"=>array(
+            "smtp"=>array(
+                'name'              => '####',
+                'host'              => '####',
+                'connection_class'  => 'login',
+                'connection_config' => array(
+                    'username' => '####',
+                    'password' => '####',
+                )
+            ),
+        ),
+     *
+     */
 );
